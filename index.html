@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cocktail Finder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Cocktail Search</h1>
+    <div class="search-container">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search cocktail by name..."
+      />
+      <button id="searchBtn">Search</button>
+    </div>
+    <div class="main">
+      <div id="cocktails" class="left"></div>
+      <div class="right">
+        <h2>Group List (<span id="count">0</span>/7)</h2>
+        <ul id="groupList"></ul>
+      </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <span id="closeModal">&times;</span>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
