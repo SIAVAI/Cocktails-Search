@@ -31,11 +31,11 @@ const showCocktails = (drinks) => {
   });
 };
 
-const fetchCocktails = (name = "a") => {
-  const res = fetch(
+const fetchCocktails = async (name = "a") => {
+  const res = await fetch(
     `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`
   );
-  const data = res.json();
+  const data = await res.json();
   showCocktails(data.drinks || []);
 };
 
